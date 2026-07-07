@@ -14,13 +14,19 @@ It helps with:
 
 ## Install
 
-Copy this repository folder into your Codex skills directory, or upload the folder/zip to a skill platform that supports `SKILL.md`.
+Use Codex's skill installer:
 
-The skill entrypoint is:
+```bash
+python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo onlyforchris/bid-response-production --path skills/bid-response-production
+```
+
+Or copy this folder into a Codex skills directory:
 
 ```text
-SKILL.md
+skills/bid-response-production
 ```
+
+Restart Codex if the skill does not appear immediately.
 
 ## Suggested Prompt
 
@@ -31,10 +37,10 @@ Use $bid-response-production to review my tender file, proposal draft, scoring t
 ## Contents
 
 ```text
-SKILL.md
-agents/openai.yaml
-references/format-baseline.md
-references/risk-checklist.md
+skills/bid-response-production/SKILL.md
+skills/bid-response-production/agents/openai.yaml
+skills/bid-response-production/references/format-baseline.md
+skills/bid-response-production/references/risk-checklist.md
 ```
 
 ## License
