@@ -11,8 +11,16 @@ Run this before delivering a technical bid or before reusing a historical sample
 ## Bid Tone Risks
 
 - Generic essay tone or marketing filler.
+- The first chapter starts with broad industry or policy background before explaining the specific project response.
+- The project positioning or `我司对本项目的核心理解` section is thin and does not state response strategy, differentiators, delivery boundary, and evidence plan.
 - Claims are broad but not tied to implementation evidence.
 - The text does not separate commitments, assumptions, customer dependencies, and items requiring verification.
+
+## Structure Risks
+
+- Functional modules do not follow the minimum pattern: 功能实现, 技术要点, 业务联动, 差异化能力, 验收/证据口径.
+- Macro background, policy background, or industry trends exceed about 20% of the first chapter.
+- A scoring item has response text but no evidence chapter, screenshot, table, test condition, or acceptance method.
 
 ## Risk Words To Search
 
@@ -32,6 +40,16 @@ Clean or justify:
 - `占位`
 - `截图待补`
 - `待完善`
+- `[投标人名称]`
+- `[客户名称]`
+- `[项目名称]`
+- `[日期]`
+- `XX`
+- `某某`
+- `待填`
+- `年月日`
+
+Also search for bracket placeholders with a pattern such as `[.*]`.
 
 Review strong commitments:
 
@@ -44,6 +62,8 @@ Review strong commitments:
 - `零风险`
 - `自动完成`
 - `无需人工`
+
+For each strong commitment, require statistical scope, period/trigger, exceptions, and acceptance method.
 
 Review weak commitments:
 
