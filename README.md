@@ -1,5 +1,7 @@
 # Bid Response Production
 
+[中文说明](README.zh-CN.md)
+
 A Codex skill for producing and reviewing Chinese technical bid materials.
 
 It helps with:
