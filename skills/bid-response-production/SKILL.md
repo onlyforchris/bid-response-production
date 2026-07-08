@@ -33,19 +33,23 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
    - response matrix: point-by-point tender compliance
    - workload estimate: effort table fill or reasonableness check
    - final QA: claims, tone, style, attachments, and formatting
-3. Build or update a compact compliance map:
+3. For a full technical proposal, build the top-level outline first.
+   - Follow the tender/customer required directory when provided.
+   - If no directory is provided, use `references/technical-proposal-outline.md`.
+   - Plan for 120+ pages unless the tender sets a shorter page limit. Do not pad; allocate enough depth to requirements, modules, evidence, implementation, service, risk, and appendices.
+4. Build or update a compact compliance map:
    - tender requirement
    - response section
    - evidence or screenshot
    - commitment boundary
    - assumptions and unresolved questions
-4. Draft or revise content:
+5. Draft or revise content:
    - use formal Chinese bid style
    - separate commitments, assumptions, customer dependencies, and items requiring later verification
    - preserve tender terms when they are scoring-table terms
    - replace demo language with delivery, validation, or evidence language
    - make the opening bid-specific before expanding into general background
-5. Verify before claiming done:
+6. Verify before claiming done:
    - DOCX: inspect paragraphs and table cells
    - XLSX: inspect changed cells and formulas
    - screenshots: visually inspect final images
@@ -71,6 +75,19 @@ For full technical proposals, do not start the main body with generic industry b
 - evidence plan: which chapters, screenshots, tables, or modules prove the response
 
 Limit macro background, policy background, and industry trends to supporting material. As a rule of thumb, generic background should stay below 20% of the first chapter, and each paragraph must explain why it matters to this project.
+
+## Full Proposal Scale
+
+When the user asks for a complete technical bid, do not produce a thin first draft. Unless the tender specifies a page cap or the user asks for a brief, target a 120+ page DOCX-equivalent plan. Use content depth, not filler:
+
+- first chapter: bid-specific understanding, response strategy, pain points, value, key success factors
+- architecture chapters: business, application, data, integration, deployment, security, performance
+- function chapters: every required module or scoring item with the full module response pattern
+- evidence chapters: screenshots, diagrams, response tables, acceptance evidence
+- delivery chapters: implementation, testing, migration, training, operations, SLA, risk, emergency plan
+- appendices: team, resumes, qualifications, deliverables, deviation table, glossary
+
+The first step is the top-level directory/outline. Use the tender directory first; otherwise use `references/technical-proposal-outline.md` as the baseline and tailor it to the project.
 
 ## Module Response Pattern
 
@@ -107,6 +124,7 @@ Hard defaults:
 
 - Use `references/format-baseline.md` when creating or normalizing DOCX layout.
 - Use `references/risk-checklist.md` before final delivery or when reviewing historical bid samples.
+- Use `references/technical-proposal-outline.md` when the tender does not provide a required directory.
 
 ## Output Patterns
 
@@ -117,6 +135,7 @@ Deliver:
 - concise change summary
 - commitment/assumption/verification notes
 - first-chapter strength check: whether the opening is bid-specific enough
+- outline/page-depth check: whether the planned technical proposal is broad enough for a 120+ page formal bid when no shorter limit is given
 
 ### Response Matrix
 

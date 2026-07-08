@@ -94,6 +94,7 @@ skills/bid-response-production/SKILL.md
 skills/bid-response-production/agents/openai.yaml
 skills/bid-response-production/references/format-baseline.md
 skills/bid-response-production/references/risk-checklist.md
+skills/bid-response-production/references/technical-proposal-outline.md
 ```
 
 ## License
