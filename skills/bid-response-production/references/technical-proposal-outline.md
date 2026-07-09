@@ -64,7 +64,7 @@ Avoid opening with broad industry background. If macro background or policy cont
 
 - Requirement-by-requirement response table
 - Scoring item response index
-- Deviation table
+- Technical deviation table, only when required by the tender or useful for technical compliance
 - Evidence table: screenshot, module, test, document, or acceptance material
 - Commitment, assumption, and verification table
 
@@ -191,7 +191,7 @@ Typical module examples:
 
 - Requirement response matrix
 - Scoring response index
-- Deviation table
+- Technical deviation table, only when required
 - Deliverable list
 - Resume attachments
 - Qualification attachments

@@ -45,6 +45,7 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
    - evidence or screenshot
    - commitment boundary
    - assumptions and unresolved questions
+   - bid-section boundary: technical bid, business bid, price bid, or separate attachment
 5. Draft or revise content:
    - use formal Chinese bid style
    - separate commitments, assumptions, customer dependencies, and items requiring later verification
@@ -67,6 +68,17 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
 - Do not use `POC`, `演示`, `测试数据`, debug labels, localhost URLs, TODO markers, or temporary wording in final bid-facing content.
 - Treat `Excel` by context: legitimate import/export templates may remain as product capability; manual Excel ledgers, temporary Excel workarounds, or Excel as the primary delivery mechanism must be rewritten as controlled batch import, system integration, or data governance language.
 - If changing a named person's role or resume wording, synchronize the main bid document and any standalone resume attachment.
+
+## Bid Section Boundary
+
+For a technical bid, include only technical response content by default. Do not add business deviation, price terms, payment terms, legal terms, contract clauses, or commercial commitments unless the tender explicitly requires those items inside the technical volume.
+
+Deviation tables:
+
+- Technical bid: include a technical deviation/response table only when required by the tender or useful for technical compliance.
+- Business bid: business deviation belongs in the business volume or a separate business response file.
+- Software module summaries may appear in the technical bid when they map to technical requirements.
+- If the tender asks for mixed appendices, label each table clearly and flag the boundary for owner confirmation.
 
 ## Opening Section Rules
 
@@ -91,7 +103,7 @@ When the user asks for a complete technical bid, do not produce a thin first dra
 - function chapters: every required module or scoring item with the full module response pattern
 - evidence chapters: screenshots, diagrams, response tables, acceptance evidence
 - delivery chapters: implementation, testing, migration, training, operations, SLA, risk, emergency plan
-- appendices: team, resumes, qualifications, deliverables, deviation table, glossary
+- appendices: team, resumes, qualifications, deliverables, technical deviation table when required, glossary
 
 The first step is the top-level directory/outline. Use the tender directory first; otherwise use `references/technical-proposal-outline.md` as the baseline and tailor it to the project.
 

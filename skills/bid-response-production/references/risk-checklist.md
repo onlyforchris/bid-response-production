@@ -20,6 +20,7 @@ Run this before delivering a technical bid or before reusing a historical sample
 
 - Functional modules do not follow the minimum pattern: 功能实现, 技术要点, 业务联动, 差异化能力, 验收/证据口径.
 - A full technical proposal was drafted without first creating a top-level directory/outline.
+- Business deviation, price terms, payment terms, legal clauses, or commercial commitments are included in a technical bid without explicit tender instructions.
 - The outline has no chapter-level page budget, so the agent cannot tell whether it is drafting a 120+ page bid or a thin technical-plan skeleton.
 - No tender directory exists, but the proposal does not follow or adapt the baseline in `technical-proposal-outline.md`.
 - The proposal is far below a 120+ page DOCX-equivalent plan when there is no tender page cap or user request for a brief.
