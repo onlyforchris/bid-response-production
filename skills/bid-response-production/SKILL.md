@@ -51,7 +51,8 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
    - preserve tender terms when they are scoring-table terms
    - replace demo language with delivery, validation, or evidence language
    - make the opening bid-specific before expanding into general background
-6. Verify before claiming done:
+6. For DOCX output from a Markdown draft, use `scripts/md_to_bid_docx.py` instead of hand-building one-off Word formatting code. Then review the result with `scripts/review_bid_docx.py`.
+7. Verify before claiming done:
    - DOCX: inspect paragraphs and table cells
    - XLSX: inspect changed cells and formulas
    - screenshots: visually inspect final images
@@ -145,6 +146,16 @@ Deliver:
 - commitment/assumption/verification notes
 - first-chapter strength check: whether the opening is bid-specific enough
 - outline/page-depth check: whether the planned technical proposal is broad enough for a 120+ page formal bid when no shorter limit is given
+
+For a natural-language request such as "generate a DOCX technical bid from this tender", use this minimum path:
+
+1. Extract or summarize tender requirements and scoring items.
+2. Draft the technical proposal in Markdown using the required tender directory or `references/technical-proposal-outline.md`.
+3. Convert Markdown to DOCX:
+   `python scripts/md_to_bid_docx.py draft.md 技术标书.docx --title "项目名称" --bidder "投标人名称" --date "日期"`
+4. Run:
+   `python scripts/review_bid_docx.py 技术标书.docx`
+5. Fix placeholder, risk-word, structure, and formatting issues before delivery.
 
 ### Response Matrix
 
