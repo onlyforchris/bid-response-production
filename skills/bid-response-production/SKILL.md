@@ -97,6 +97,26 @@ The first step is the top-level directory/outline. Use the tender directory firs
 
 For a Markdown first draft, still enforce DOCX-equivalent depth. A 40,000-character draft with 30+ modules is usually only an outline or first pass, not a complete 120+ page bid. Major functional modules should normally contain 800-1200+ Chinese characters each; minor interface or service items should normally contain 400-800+ Chinese characters each. If evidence is not available, add an explicit evidence-needed note in the compliance map instead of omitting the evidence path.
 
+## Full Proposal Generation Loop
+
+For a complete DOCX technical bid, do not try to finish the whole document in one generation pass. Use this loop:
+
+1. Build outline, page budget, and compliance map.
+2. Draft chapter 1 and the response matrix first.
+3. Expand functional modules in batches of 5-8 modules.
+4. After each batch, check module depth before continuing.
+5. Convert to DOCX only after the Markdown content passes the depth gate.
+6. Run `scripts/review_bid_docx.py` and fix the reported issues.
+
+Depth gate:
+
+- core modules: 800-1200+ Chinese characters each
+- ordinary modules: 500-800+ Chinese characters each
+- minor interface/service items: 300-500+ Chinese characters each
+- every module must include function, business flow, technical mechanism, permission/audit/security control, exceptions, linkage, and acceptance/evidence
+
+If the module average is below 700 Chinese characters or any module is below 300 Chinese characters, do not proceed to final DOCX delivery. Expand the thin modules first.
+
 ## Module Response Pattern
 
 For each functional module or scoring item, use this minimum structure unless the tender template requires otherwise:

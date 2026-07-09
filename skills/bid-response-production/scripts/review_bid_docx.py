@@ -102,8 +102,10 @@ def review(path: Path):
         warnings.append("risk terms remain")
     if module_lengths:
         avg = sum(x["body_chars"] for x in module_lengths) // len(module_lengths)
-        if avg < 400:
+        if avg < 700:
             warnings.append("functional modules are too thin for a formal technical bid")
+        if any(x["body_chars"] < 300 for x in module_lengths):
+            warnings.append("some functional modules are below the minimum expansion gate")
     pages = app_page_count(path)
     if pages == 1 and len(text) > 5000:
         warnings.append("stored page count is stale; open/update fields or render to confirm real pages")
@@ -125,6 +127,7 @@ def review(path: Path):
                 else 0
             ),
             "min_body_chars": min((x["body_chars"] for x in module_lengths), default=0),
+            "thin_items": [x for x in module_lengths if x["body_chars"] < 300],
             "items": module_lengths,
         },
         "top_fonts": fonts.most_common(8),
