@@ -37,6 +37,8 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
    - Follow the tender/customer required directory when provided.
    - If no directory is provided, use `references/technical-proposal-outline.md`.
    - Plan for 120+ pages unless the tender sets a shorter page limit. Do not pad; allocate enough depth to requirements, modules, evidence, implementation, service, risk, and appendices.
+   - Include a page-budget table by chapter before drafting. If the draft is materially below the page budget, call it an outline or first pass, not a complete technical bid.
+   - Put requirement response, scoring response, evidence, and appendix chapters into the outline from the start; do not leave them as afterthoughts.
 4. Build or update a compact compliance map:
    - tender requirement
    - response section
@@ -61,7 +63,8 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
 - Do not make unconditional claims about availability, accuracy, concurrency, automation, recognition rate, or system responsibility.
 - Tie metrics to test conditions, data scope, acceptance method, and responsibility boundary.
 - Screenshots must prove a bid point. Add concise captions explaining what each screenshot demonstrates.
-- Do not use `POC`, `演示`, `测试数据`, `Excel`, debug labels, localhost URLs, TODO markers, or temporary wording in final bid-facing content.
+- Do not use `POC`, `演示`, `测试数据`, debug labels, localhost URLs, TODO markers, or temporary wording in final bid-facing content.
+- Treat `Excel` by context: legitimate import/export templates may remain as product capability; manual Excel ledgers, temporary Excel workarounds, or Excel as the primary delivery mechanism must be rewritten as controlled batch import, system integration, or data governance language.
 - If changing a named person's role or resume wording, synchronize the main bid document and any standalone resume attachment.
 
 ## Opening Section Rules
@@ -76,6 +79,8 @@ For full technical proposals, do not start the main body with generic industry b
 
 Limit macro background, policy background, and industry trends to supporting material. As a rule of thumb, generic background should stay below 20% of the first chapter, and each paragraph must explain why it matters to this project.
 
+The first chapter should not bury `我司对本项目的核心理解` at the end as a short summary. Put the project response summary, response strategy, and evidence path before industry background, or make them section 1.1.
+
 ## Full Proposal Scale
 
 When the user asks for a complete technical bid, do not produce a thin first draft. Unless the tender specifies a page cap or the user asks for a brief, target a 120+ page DOCX-equivalent plan. Use content depth, not filler:
@@ -89,6 +94,8 @@ When the user asks for a complete technical bid, do not produce a thin first dra
 
 The first step is the top-level directory/outline. Use the tender directory first; otherwise use `references/technical-proposal-outline.md` as the baseline and tailor it to the project.
 
+For a Markdown first draft, still enforce DOCX-equivalent depth. A 40,000-character draft with 30+ modules is usually only an outline or first pass, not a complete 120+ page bid. Major functional modules should normally contain 800-1200+ Chinese characters each; minor interface or service items should normally contain 400-800+ Chinese characters each. If evidence is not available, add an explicit evidence-needed note in the compliance map instead of omitting the evidence path.
+
 ## Module Response Pattern
 
 For each functional module or scoring item, use this minimum structure unless the tender template requires otherwise:
@@ -100,6 +107,8 @@ For each functional module or scoring item, use this minimum structure unless th
 5. 验收/证据口径: screenshots, reports, logs, test conditions, or acceptance evidence.
 
 If a section only lists functions without technical points, business linkage, and evidence, treat it as unfinished.
+
+Do not say a module is written from "four dimensions" or "five dimensions" unless those dimensions are present as actual subheadings or clearly separated paragraphs. For banking, treasury, finance, and controlled business systems, add permission/audit/security controls to each major module unless the tender explicitly excludes them.
 
 ## Claim Boundaries
 

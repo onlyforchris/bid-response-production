@@ -2,6 +2,27 @@
 
 Use this when the tender file or customer template does not provide a required directory. Tailor names and depth to the project. For a complete technical bid, plan enough content for a 120+ page DOCX-equivalent document unless the tender sets a shorter limit.
 
+Before drafting, create a page-budget table and then write to that budget. A practical 120+ page distribution is:
+
+| Chapter | Suggested pages |
+| --- | ---: |
+| Front matter and directory | 3-5 |
+| 1. Project understanding and response strategy | 10-15 |
+| 2. Overall solution design | 15-20 |
+| 3. Requirement and scoring response matrix | 10-15 |
+| 4. Functional module detailed response | 40-55 |
+| 5. Data and integration plan | 8-12 |
+| 6. Security, compliance, and control | 8-12 |
+| 7. Implementation plan | 10-15 |
+| 8. Testing and acceptance plan | 8-12 |
+| 9. Training and knowledge transfer | 4-6 |
+| 10. Operations, maintenance, and service | 8-12 |
+| 11. Risk and emergency plan | 6-10 |
+| 12. Team and qualifications | 6-10 |
+| Appendices and evidence pack | 15-25 |
+
+If the output is only Markdown, still use the table as a DOCX-equivalent depth target. If the content is much shorter, label it as a first draft and list the chapters needing expansion.
+
 ## Front Matter
 
 - Cover

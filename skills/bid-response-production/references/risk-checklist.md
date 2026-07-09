@@ -20,10 +20,13 @@ Run this before delivering a technical bid or before reusing a historical sample
 
 - Functional modules do not follow the minimum pattern: 功能实现, 技术要点, 业务联动, 差异化能力, 验收/证据口径.
 - A full technical proposal was drafted without first creating a top-level directory/outline.
+- The outline has no chapter-level page budget, so the agent cannot tell whether it is drafting a 120+ page bid or a thin technical-plan skeleton.
 - No tender directory exists, but the proposal does not follow or adapt the baseline in `technical-proposal-outline.md`.
 - The proposal is far below a 120+ page DOCX-equivalent plan when there is no tender page cap or user request for a brief.
 - Macro background, policy background, or industry trends exceed about 20% of the first chapter.
 - A scoring item has response text but no evidence chapter, screenshot, table, test condition, or acceptance method.
+- A module claims to answer from four or five dimensions, but the actual subheadings only cover function, technical points, or business linkage.
+- Banking, treasury, finance, or controlled business modules omit permission, audit, security, approval, or exception-control wording.
 
 ## Risk Words To Search
 
@@ -33,7 +36,6 @@ Clean or justify:
 - `演示`
 - `测试数据`
 - `模拟数据`
-- `Excel`
 - `debug`
 - `localhost`
 - `127.0.0.1`
@@ -53,6 +55,11 @@ Clean or justify:
 - `年月日`
 
 Also search for bracket placeholders with a pattern such as `[.*]`.
+
+Review `Excel` by context:
+
+- Keep legitimate product capabilities such as Excel import/export templates when they are part of the tendered function.
+- Rewrite manual Excel ledgers, Excel as the primary control mechanism, or temporary Excel workarounds into controlled batch import, system integration, data validation, or governance language.
 
 Review strong commitments:
 
