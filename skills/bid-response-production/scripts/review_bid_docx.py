@@ -65,10 +65,13 @@ def review(path: Path):
     sizes = Counter()
     fonts = Counter()
     line_spacing = Counter()
+    heading_styles = Counter()
     for para in doc.paragraphs:
         run = next((r for r in para.runs if r.text.strip()), None)
         if not run:
             continue
+        if para.style.name.startswith("Heading"):
+            heading_styles[para.style.name] += 1
         fonts[font_name(run) or "unknown"] += 1
         sizes[str(run.font.size.pt if run.font.size else "inherited")] += 1
         line_spacing[str(para.paragraph_format.line_spacing or "inherited")] += 1
@@ -133,6 +136,7 @@ def review(path: Path):
         "top_fonts": fonts.most_common(8),
         "top_font_sizes": sizes.most_common(8),
         "top_line_spacing": line_spacing.most_common(8),
+        "heading_styles": heading_styles.most_common(),
         "table_summary": tables,
         "first_paragraphs": para_text[:20],
     }

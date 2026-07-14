@@ -59,6 +59,8 @@ Historical samples may provide structure and phrasing ideas, but do not inherit 
    - screenshots: visually inspect final images
    - final package: list deliverables and unresolved blockers
 
+Script boundary: scripts catch mechanical issues such as placeholders, risk words, stale page metadata, table summaries, heading styles, and thin module counts. The agent must still judge semantic issues: opening order, project-specific positioning, macro-background ratio, module five-part completeness, and whether evidence maps to scoring points.
+
 ## Writing Rules
 
 - Prefer formal party references such as `我司/贵司` unless the target document already has an approved convention.

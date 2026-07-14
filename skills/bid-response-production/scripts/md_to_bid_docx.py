@@ -12,7 +12,6 @@ import re
 from pathlib import Path
 
 from docx import Document
-from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
@@ -64,12 +63,31 @@ def add_para(doc, text, size=12, bold=False, align=None, indent=True):
     return p
 
 
+def setup_styles(doc):
+    specs = {
+        "Normal": (12, False),
+        "Heading 1": (16, True),
+        "Heading 2": (14, True),
+        "Heading 3": (12, True),
+    }
+    for name, (size, bold) in specs.items():
+        style = doc.styles[name]
+        style.font.name = FONT
+        style._element.rPr.rFonts.set(qn("w:eastAsia"), FONT)
+        style.font.size = Pt(size)
+        style.font.bold = bold
+        style.font.color.rgb = RGBColor(0, 0, 0)
+
+
 def add_heading(doc, text, level):
+    p = doc.add_paragraph(style=f"Heading {level}")
+    p.paragraph_format.line_spacing = 1.5
+    p.paragraph_format.space_after = Pt(6 if level == 1 else 4 if level == 2 else 3)
     if level == 1:
-        return add_para(doc, text, 16, True, WD_ALIGN_PARAGRAPH.CENTER, False)
-    if level == 2:
-        return add_para(doc, text, 14, True, None, False)
-    return add_para(doc, text, 12, True, None, False)
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p.add_run(text.strip())
+    set_run_font(run, 16 if level == 1 else 14 if level == 2 else 12, True)
+    return p
 
 
 def parse_table(lines, start):
@@ -114,6 +132,7 @@ def add_cover(doc, title, bidder, date_text):
 
 def convert(md_path: Path, out_path: Path, title: str, bidder: str, date_text: str):
     doc = Document()
+    setup_styles(doc)
     section = doc.sections[0]
     section.page_width = Cm(21.0)
     section.page_height = Cm(29.7)
